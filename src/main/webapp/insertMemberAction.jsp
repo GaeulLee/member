@@ -27,7 +27,7 @@
 			String msg = URLEncoder.encode("비밀번호를 입력하세요.", "utf-8");
 			response.sendRedirect(request.getContextPath()+"/insertMemberForm.jsp?msg="+msg);
 			return;
-		}
+	}
 
 	// 2) 요청처리
 	String driver = "org.mariadb.jdbc.Driver";

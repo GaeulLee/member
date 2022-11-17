@@ -12,7 +12,7 @@
 
 	//회원정보 가져오기 위해 session에 저장된 정보(loginMemberId) 가져오기
 	String loginMemberId = (String)(session.getAttribute("loginMemberId"));
-	
+		System.out.println("loginMemberId--> "+loginMemberId);
 	// 2. 요청처리
 	String driver = "org.mariadb.jdbc.Driver";
 	String dbUrl = "jdbc:mariadb://127.0.0.1:3306/gdj58";
@@ -56,7 +56,7 @@
 		</style>
 	</head>
 	<body>
-	<div class="container w-50" id="verticalMiddle">
+	<div class="container w-50">
 		<table class="table table-borderless">
 			<tr>
 				<td colspan="2">
@@ -65,11 +65,11 @@
 			</tr>
 			<tr>
 				<td>회원 이름</td>
-				<td><%=member.memberId%></td>
+				<td><%=member.memberName%></td>
 			</tr>
 			<tr>
 				<td>회원 ID</td>
-				<td><%=member.memberPw%></td>
+				<td><%=member.memberId%></td>
 			</tr>
 			<tr>
 				<td colspan="2">		
